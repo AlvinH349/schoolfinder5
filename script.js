@@ -66,13 +66,7 @@ request.open('GET', 'https://data.cityofnewyork.us/resource/uq7m-95z8.json', tru
   var us = document.getElementById("sport").value.toUpperCase().trim();//sport
   var sbool = false;
  
-  /*
-  var utrain = document.getElementById("train").value.toUpperCase().trim();//train type
-  var trainbool = false; // bool for train
-  
-  var ubus = document.getElementById("bus").value.toUpperCase().trim();//bus type
-  var busbool = false; // bool for bus
-  */
+
   
 // load it
 request.onload = function () {
@@ -246,33 +240,6 @@ var  str_data = JSON.stringify(data);
    }
   else
     sbool = false; //when current school sports is undefined
-   
-   
-   /*
-   
-   //set bool for train
-      if(utrain == "ANY" ) //set bool for trian for NONE
-   trainbool = true;
-   else if(school.subway != undefined){ //make shure current school train is defined
-   var uctrain = school.subway.toUpperCase(); // make current train uppercase
-     trainbool = (uctrain.search(utrain) != -1); 
-   }
-  else
-    trainbool = false; //when current school train is undefined
-   
-   
-   
-   
-      //set bool for bus
-      if(ubus == "ANY" ) //set bool for bus for NONE
-   busbool = true;
-   else if(school.ubs != undefined){ //make shure current school bus is defined
-   var ucbus = school.subway.toUpperCase(); // make current bus uppercase
-     busbool = (ucbus.search(ubus) != -1); 
-   }
-  else
-     busbool = false; //when current school bus is undefined
-   */
    
    
  
