@@ -77,7 +77,7 @@ var  str_data = JSON.stringify(data);
   
   //MAKE SURE THAT THE INPUTS ARE CORRECT ========================================================================================================================================================
  if(un.length == 0 || uinter.length == 0 || ua.length == 0 || max.length == 0 || min.length == 0 || uc.length == 0 || us.length == 0) //if any texboxes are empty
-  alert("Please make sure to fill eveything in the textboxes");
+  alert("Please make sure to fill everything in the textboxes");
   
   
   else if(typeof max != "number" && typeof min != "number") //check if min/max inputs are values
@@ -496,7 +496,7 @@ var  str_data = JSON.stringify(data);
   } //close else
   
   if(n == 0)
-    alert("Sorry, there are no schools shown based upon yor preference. Please try again");
+    alert("Sorry, there are no schools shown based upon your preference. Please try again");
 
 
 } //close function for request.onload
