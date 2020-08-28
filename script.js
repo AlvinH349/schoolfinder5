@@ -66,13 +66,6 @@ request.open('GET', 'https://data.cityofnewyork.us/resource/uq7m-95z8.json', tru
   var us = document.getElementById("sport").value.toUpperCase().trim();//sport
   var sbool = false;
  
-  /*
-  var utrain = document.getElementById("train").value.toUpperCase().trim();//train type
-  var trainbool = false; // bool for train
-  
-  var ubus = document.getElementById("bus").value.toUpperCase().trim();//bus type
-  var busbool = false; // bool for bus
-  */
   
 // load it
 request.onload = function () {
@@ -83,7 +76,7 @@ var  str_data = JSON.stringify(data);
   
   //MAKE SURE THAT THE INPUTS ARE CORRECT ========================================================================================================================================================
  if(un.length == 0 || uinter.length == 0 || ua.length == 0 || max.length == 0 || min.length == 0 || uc.length == 0 || us.length == 0) //if any texboxes are empty
-  alert("Please make sure to fill eveything in the textboxes");
+  alert("Please make sure to fill everything in the textboxes");
   
   
   else if(typeof max != "number" && typeof min != "number") //check if min/max inputs are values
@@ -247,33 +240,7 @@ var  str_data = JSON.stringify(data);
   else
     sbool = false; //when current school sports is undefined
    
-   
-   /*
-   
-   //set bool for train
-      if(utrain == "ANY" ) //set bool for trian for NONE
-   trainbool = true;
-   else if(school.subway != undefined){ //make shure current school train is defined
-   var uctrain = school.subway.toUpperCase(); // make current train uppercase
-     trainbool = (uctrain.search(utrain) != -1); 
-   }
-  else
-    trainbool = false; //when current school train is undefined
-   
-   
-   
-   
-      //set bool for bus
-      if(ubus == "ANY" ) //set bool for bus for NONE
-   busbool = true;
-   else if(school.ubs != undefined){ //make shure current school bus is defined
-   var ucbus = school.subway.toUpperCase(); // make current bus uppercase
-     busbool = (ucbus.search(ubus) != -1); 
-   }
-  else
-     busbool = false; //when current school bus is undefined
-   */
-   
+
    
  
   if(borbool && nbool && interbool && debool && ellbool && langbool && ssbool && apbool  && ts <= max && ts >= min && cbool && sbool ){ //conditions based upon inputs =============================================
@@ -529,7 +496,7 @@ var  str_data = JSON.stringify(data);
   } //close else
   
   if(n == 0)
-    alert("Sorry, there are no schools shown based upon yor preference. Please try again");
+    alert("Sorry, there are no schools shown based upon your preference. Please try again");
 
 
 } //close function for request.onload
