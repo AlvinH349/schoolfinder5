@@ -240,6 +240,8 @@ var  str_data = JSON.stringify(data);
   else
     sbool = false; //when current school sports is undefined
    
+
+   
  
   if(borbool && nbool && interbool && debool && ellbool && langbool && ssbool && apbool  && ts <= max && ts >= min && cbool && sbool ){ //conditions based upon inputs =============================================
 
@@ -522,16 +524,12 @@ function CheckUndefinedNum(cureent_school_col){  //check if the data is undefine
      return(cureent_school_col * 100 + "%");
 }
 
-
-
 function CheckUndefined_Search(cureent_school_col, input){ //check if th data is undefined and if input can be searched
   if(cureent_school_col != undefined && cureent_school_col.toUpperCase().search(input) != -1)
     return true;
   else
     return false;
 }
-
-
 
 function selectionF(cureent_school_col, input){  // for selection in setting the bool
 if(input == "any")
@@ -540,30 +538,22 @@ if(input == "any")
      return (cureent_school_col.search(input) != -1);
 }
 
-
-
 function textF(cureent_school_col, input){ // for text in setting the bool
   if(input == "ANY" ) //set bool for input for NONE
    return true;
-   else if(cureent_school_col != undefined) //make shure current school etry is defined
+   else if(cureent_school_col != undefined) //make share current school entry is defined
      return (cureent_school_col.toUpperCase().search(input) != -1); 
   else
     return false; //when current entry is undefined
 }
 
-
-
 function addonlist(program, prgdesc, interest){  //add to list based upon condition for program
-  
   var result = "";
-  
   if(program != undefined)
         result = "<br>" + program + ": " + prgdesc
           + "<br>For students interested in: " + interest + "<br>";
-  
   return result;
 }
-
 
 function addao(current_ao){ //add to list based upon condition for academic opportunity
   var result = "";
@@ -572,11 +562,7 @@ function addao(current_ao){ //add to list based upon condition for academic oppo
   return result;
 }
 
-
-
-
 function Addrl(r1,r2,r3,r4,r5,r6,r7,r8,r9,r10){  //adding requirements if they exist or the are new
-  
   if(r1 != undefined) return r1 + "| "; else return ""; 
   if(r2 != undefined) return r2 + "| "; else return ""; 
   if(r3 != undefined) return r3 + "| "; else return ""; 
@@ -586,6 +572,6 @@ function Addrl(r1,r2,r3,r4,r5,r6,r7,r8,r9,r10){  //adding requirements if they e
   if(r7 != undefined) return r7 + "| "; else return ""; 
   if(r8 != undefined) return r8 + "| "; else return ""; 
   if(r9 != undefined) return r9 + "| "; else return ""; 
-  if(r10 != undefined) return r10 + "| "; else return ""; 
-  
+  if(r10 != undefined) return r10 + "| "; else return "";  
 }
+
