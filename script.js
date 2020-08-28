@@ -240,8 +240,6 @@ var  str_data = JSON.stringify(data);
   else
     sbool = false; //when current school sports is undefined
    
-
-   
  
   if(borbool && nbool && interbool && debool && ellbool && langbool && ssbool && apbool  && ts <= max && ts >= min && cbool && sbool ){ //conditions based upon inputs =============================================
 
