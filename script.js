@@ -66,7 +66,6 @@ request.open('GET', 'https://data.cityofnewyork.us/resource/uq7m-95z8.json', tru
   var us = document.getElementById("sport").value.toUpperCase().trim();//sport
   var sbool = false;
  
-
   
 // load it
 request.onload = function () {
@@ -240,7 +239,6 @@ var  str_data = JSON.stringify(data);
    }
   else
     sbool = false; //when current school sports is undefined
-   
    
  
   if(borbool && nbool && interbool && debool && ellbool && langbool && ssbool && apbool  && ts <= max && ts >= min && cbool && sbool ){ //conditions based upon inputs =============================================
